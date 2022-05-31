@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Vehiculos</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>MARCA</th>
+                        <th>MODELO</th>
+                        <th>CILINDRAJE</th>
+                        <th>AÑO</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let vehiculos of vehiculos" class="text-center">
+                        <td>{{vehiculos.id_vehiculo}}</td>
+                        <td>{{vehiculos.marca}}</td>
+                        <td>{{vehiculos.modelo}}</td>
+                        <td>{{vehiculos.cilindraje}}</td>
+                        <td>{{vehiculos.ano_fabricacion}}</td>
+                        
+                        <td>
+                            <button (click)="Editar(vehiculos)" class="btn btn-warning">Editar</button>
+                            <button (click)="Delete(vehiculos)"class="btn btn-danger" style="margin-left: 10px;">ELIMINAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
