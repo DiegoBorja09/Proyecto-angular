@@ -7,12 +7,6 @@
                 <table class="table table-hover">
                 <thead >
                     <tr class="text-center">
-                        <th>ID</th>
-                        <th>NOMBRE</th>
-                        <th>APELLIDO</th>
-                        <th>TIPO ID</th>
-                        <th>IDENTIFICACION</th>
-                        <th>FECHA REGISTRO</th>
                         <th>NUMERO</th>
                         <th>EMAILS</th>
                         <th>ACCION</th>
@@ -22,16 +16,8 @@
                 </thead>
                 <tbody>
                     <tr  *ngFor="let user of user" class="text-center">
-                        <td>{{user.id}}</td>
-                        <td>{{user.nombre}}</td>
-                        <td>{{user.apellidos}}</td>
-                        <td>{{user.tipoIdentificacion}}</td>
-                        <td>{{user.identificacion}}</td>
-                        <td>{{user.fechaingreso.split('T')[0]+" "+(user.fechaingreso.split('T')[1]).split('.')[0]}}</td>
                         <td>{{user.numero}}</td>
                         <td>{{user.emails}}</td>
-
-                        
                         <td>
                         <button (click)="Delete(user)"class="btn btn-danger" style="margin:5px">Eliminar Tel y Emails</button>
                         </td>
