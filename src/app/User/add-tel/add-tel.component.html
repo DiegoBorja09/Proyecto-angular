@@ -1,0 +1,21 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar telefono</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Numero:</label>
+                    <input type="text" class="form-control"  [(ngModel)]="user.numero" name="numero" required>
+                    <label for="">tipo:</label>
+                    <input type="text" class="form-control"  [(ngModel)]="user.tipo" name="tipo" required>
+                    <label for="">indicativo:</label>
+                    <input type="text" class="form-control" required [(ngModel)]="user.indicativo" name="indicativo">
+
+                </div>
+                <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

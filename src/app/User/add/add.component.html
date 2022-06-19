@@ -1,0 +1,27 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Usuario</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group" >
+                    <label for="">Nombre:</label>
+                    <input type="text" class="form-control"  [(ngModel)]="user.nombre" name="nombre" >
+                    <label for="">Apellidos:</label>
+                    <input type="text" class="form-control"  [(ngModel)]="user.apellidos" name="apellidos" >
+                    <label for="">tipoidentificacion:</label>
+                    <select type=text required class="form-control " [(ngModel)]="user.tipoIdentificacion" name="tipoidentificacion">
+                        <option selected disabled hidden>seleccionar</option>
+                        <option>CC</option>
+                        <option>NIT</option>
+                      </select>
+                    <label for="">identificacion:</label>
+                    <input type="text" class="form-control" required [(ngModel)]="user.identificacion" name="identificacion">
+
+                </div>
+                <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -12,8 +12,15 @@
 
 <div class="center">
 <button (click)="Listar()" class="btn btn-info">Listar</button>
-<button (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Nuevo</button>
+<button (click)="Nuevo()" class="btn btn-info" style="margin: 10px;">Nuevo</button>
 </div>
+<div class="col-sm-8 col-md-6 col-lg-4 mx-auto">
+<input type="text" class="form-control"  [(ngModel)]="user.nombre" name="nombre" id="nombre" placeholder="Buscar Por Nombre" >
+</div>
+<div class="center">
+  <button  (click)="Buscar(user)" type="text"class="btn btn-info"style="margin: 10px;">Buscar</button>
+</div>
+
 <hr>
 <router-outlet></router-outlet>
 <style>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Vehiculos } from 'src/app/Modelo/Vehiculos';
+import { User } from 'src/app/Modelo/User';
 import { ServiceService } from 'src/app/Service/service.service';
 
 @Component({
@@ -14,12 +14,12 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  vehiculos:Vehiculos=new Vehiculos
+  user:User=new User
 
   //metodo guardar que invoca al metodo createVehiculo de servicios para agregar un registro a la base de datos 
   Guardar(){
-    this.service.createVehiculo(this.vehiculos).subscribe(data=>{
-      alert("se Agrego con Exito!!!!");
+    this.service.createUser(this.user).subscribe(data=>{
+      alert(data);
       this.router.navigate(["listar"]);
     })
   }

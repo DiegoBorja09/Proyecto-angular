@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'src/app/Modelo/User';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tcc';
-
+  title = 'Prueba';
+  user:User=new User
   constructor(private router:Router){}
 
 //metodo del boton que nos redirecciona a el html de listar
@@ -18,5 +19,11 @@ export class AppComponent {
 //metodo del boton que nos redirecciona a el html de add/agregar
   Nuevo(){
     this.router.navigate(["add"])
+  }
+  Buscar(user:User){
+    localStorage.setItem("nombre",user.nombre.toString());
+    this.router.navigate(["buscar"])
+    
+
   }
 }
