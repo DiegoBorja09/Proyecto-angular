@@ -1,27 +1,46 @@
-# Tcc
+# Backend-prueba
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+## instalacion
 
-## Development server
+Luego de clonar el repositorio ejecuta el comando 
+*npm install*
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+para correr el proyecto en produccion debes ejecutar el comando
+*npm run start*.
+Con esto ya podemos ver nuestro proyecto en el puerto 4200 como es costumbre.
 
-## Code scaffolding
+## Aplicacion
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+en el inicio de la aplicacion vamos a tener esta interfaz
+[![Captura2.jpg](https://i.postimg.cc/bvvCf2sj/Captura2.jpg)](https://postimg.cc/VJ3Bjvq7)
 
-## Build
+para obtener todos los usuarios precionamos en boton listar y nuestro Frontend va a enviar una peticion a nuestro Backend y obtendremos los usuarios registrados en la aplicación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[![Captura3.jpg](https://i.postimg.cc/3rjg9xxj/Captura3.jpg)](https://postimg.cc/jC5wSKNC)
 
-## Running unit tests
+luego de que el Frontend obtenga respues listara nuestros usuarios en una tabla con algunos botones para hacer varias operaciones
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+si precionamos el boton de nuevo al lado de listar obtendremos un formulario donde podremos ingresar los datos de el usuario que deseamos registrar si dejamos algun campo vacio nuestro backend nos devolvera un mensaje que sera mostrado por medio de un alert al usuario con el error producido
 
-## Running end-to-end tests
+[![Captura4.jpg](https://i.postimg.cc/nh9rR318/Captura4.jpg)](https://postimg.cc/BjsJtcyN)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+luego de ingresar los datos precionamos en boton de guardar para envia los datos a nuestro Backend para que este guarde la informacion en nuestra base de datos
 
-## Further help
+si precionamos el boton de Addtelefono obtendremos un formulario donde podremos agregar un telefono a el usuario tambien podremos agregar un email si le damos al el boton addemail
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+el boton de mas informacion nos muestra los telefonos y emails agregados por el usuario
+
+[![Captura5.jpg](https://i.postimg.cc/JzBrRtgS/Captura5.jpg)](https://postimg.cc/18shHRyK)
+
+en esta pantalla tendremos un boton que elimina los telefonos de el usuario y el email
+
+por ultimo tendremos un input en la cabecera que busca a los usuarios y los lista por su nombre
+
+## Tener en cuenta
+
+* si el usuario no tiene mas informacion adicional no se mostrara nada al dar al boton mas informacion
+
+* si buscas a el usuario por su nombre y escribe un nombre no registrado en la base de datos la tabla no mostrara datos 
+
+* si el usuario no tiene email e telefonos no mostrara nda el boton de mas informacion 
+
