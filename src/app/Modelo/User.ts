@@ -6,9 +6,6 @@ export class User{
     apellidos!: String;
     tipoIdentificacion!: String;
     identificacion!:String;
-    fechaingreso!:String;
-    tipo!:String;
     numero!:String;
-    indicativo!:String;
     emails!:String;
 }
