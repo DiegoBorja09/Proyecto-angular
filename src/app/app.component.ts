@@ -20,10 +20,5 @@ export class AppComponent {
   Nuevo(){
     this.router.navigate(["add"])
   }
-  Buscar(user:User){
-    localStorage.setItem("nombre",user.nombre.toString());
-    this.router.navigate(["buscar"])
-    
-
-  }
+ 
 }

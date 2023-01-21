@@ -9,7 +9,7 @@ import { ServiceService } from 'src/app/Service/service.service';
   styleUrls: ['./editar.component.css']
 })
 export class EditarComponent implements OnInit {
-  user!: User[];
+  user: User = new User();
   constructor(private router:Router,private service:ServiceService) { }
 
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class EditarComponent implements OnInit {
   //metodo editar que recibe un id y lo guarda en una variable para de esta manera mostrar los datos del objeto en nuestro html 
   Editar(){
     let id=localStorage.getItem("id");
-    this.service.getByiduser(+id).subscribe(data=>{
+    this.service.getbyUser(id!).subscribe(data=>{
     this.user=data;
       
     })

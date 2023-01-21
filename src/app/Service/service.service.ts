@@ -12,49 +12,46 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
 //url que pasa nuestro backend y lo enlaza al proyecto frontend
 
-  url="http://localhost:4000/api/users";
+  url="http://localhost:4000/api/zapateria";
 
   //obtener User trayendolo desde nuestro backedn
   getUser(){
     return this.http.get<User[]>(this.url);
   }
-  getUserbyid(id:number){
-    return this.http.get<User[]>(this.url+"/"+id);
-  }
   getUserall(){
-    return this.http.get<User[]>(this.url+"/all");
+    return this.http.get<User>(this.url+"/all");
   }
 // crear user y enviarlo a nuestro backend con el metodo post
   createUser(user:User){
-    return this.http.post<User>(this.url,user);
+    return this.http.post<User>(this.url+"/create",user);
   }
 
   createTel(user:User){
-    return this.http.post<User>(this.url+"/telefonos/"+user.id,user);
+    return this.http.post<User>(this.url+"/telefonos/"+user._id,user);
   }
   createemail(user:User){
-    return this.http.post<User>(this.url+"/emails/"+user.id,user);
+    return this.http.post<User>(this.url+"/emails/"+user._id,user);
   }
   //obtener user mediante el id trayendolo desde nuestro backedn
-  getByid(id:number){
-    return this.http.get<User[]>(this.url+"/"+id);
+  getByid(id:string){
+    return this.http.get<User>(this.url+"/"+id);
   }
-  getByiduser(id:number){
-    return this.http.get<User[]>(this.url+"/actualizar/"+id);
+  getbyUser(id:string){
+    return this.http.get<User>(this.url+"/byid/"+id);
   }
   getByname(nombre:string){
-    return this.http.get<User[]>(this.url+"/nombre/"+nombre);
+    return this.http.get<User>(this.url+"/nombre/"+nombre);
   }
   //actualizar nuestro user y enviarlo actualizado a nuestro backend
-  updateUser(user:User[]){
-    return this.http.put<User[]>(this.url+"/"+user[0].id,user[0]);
+  updateUser(user:User){
+    return this.http.put<User>(this.url+"/update/"+user._id,user);
   }
   //eliminar user mediante su id enviado al backend
   deleteUser(user:User){
-    return this.http.delete<User>(this.url+"/"+user.id);
+    return this.http.delete<User>(this.url+"/delete/"+user._id);
   }
   deletetel(user:User[]){
-    return this.http.delete<User>(this.url+"/telefonos/"+user[0].id);
+    return this.http.delete<User>(this.url+"/telefonos/"+user[0]._id);
   }
   
   

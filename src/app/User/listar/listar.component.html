@@ -9,25 +9,24 @@
                 <thead >
                     <tr class="text-center">
                         <th>ID</th>
-                        <th>NOMBRE</th>
-                        <th>APELLIDO</th>
-                        <th>TIPO ID</th>
-                        <th>IDENTIFICACION</th>
-                        <th>FECHA REGISTRO </th>
-                        <th>ACCION</th>
-                        <th>AGREGAR</th>
-                        <th>AJUSTES</th>
+                        <th>MARCA</th>
+                        <th>TALLA</th>
+                        <th>COLOR</th>
+                        <th>GENERO</th>
+                        <th>DESCRIPCION</th>
+                        <th>OPCIONES</th>
+                        
                         
                     </tr>
                 </thead>
                 <tbody>
                     <tr  *ngFor="let user of user" class="text-center">
-                        <td>{{user.id}}</td>
-                        <td>{{user.nombre}}</td>
-                        <td>{{user.apellidos}}</td>
-                        <td>{{user.tipoIdentificacion}}</td>
-                        <td>{{user.identificacion}}</td>
-                        <td>{{user.fechaingreso.split('T')[0]+" "+(user.fechaingreso.split('T')[1]).split('.')[0]}}</td>
+                        <td>{{user._id}}</td>
+                        <td>{{user.marca}}</td>
+                        <td>{{user.talla}}</td>
+                        <td>{{user.color}}</td>
+                        <td>{{user.genero}}</td>
+                        <td>{{user.descripcion}}</td>
 
                         
                         <td>
@@ -37,17 +36,6 @@
                         width: 115px;">Eliminar</button>
                         </td>
 
-                       
-                        <td>
-                        <button (click)="agregarTel(user)" class="btn btn-info " style="margin: 5px;border: 2px;height: 40px;
-                        width: 115px;">Addtelefono</button>
-                        <button (click)="agregaremail(user)"class="btn btn-info"style="border: 2px;height: 40px;
-                        width: 115px;" >Addemail</button>
-                    </td>
-                    <td>
-                    <button (click)="info(user)" class="btn btn-info " style="margin: 5px; border: 2px;height: 90px;
-                    width: 115px;">Mas Informacion</button>
-                    </td>
                     </tr>
                 </tbody>
                 </table>

@@ -22,21 +22,10 @@ export class ListarComponent implements OnInit {
   }
   //metodo editar que guarda el id en una variable de el user que vamos a editar para mostrar luego los datos de este en nuestro html
   Editar(user:User):void{
-    localStorage.setItem("id",user.id.toString());
+    localStorage.setItem("id",user._id.toString());
     this.router.navigate(["editar"]);
   }
-  agregarTel(user:User):void{
-    localStorage.setItem("id",user.id.toString());
-    this.router.navigate(["addtel"]);
-  }
-  agregaremail(user:User):void{
-    localStorage.setItem("id",user.id.toString());
-    this.router.navigate(["addemail"]);
-  }
-  info(user:User):void{
-    localStorage.setItem("id",user.id.toString());
-    this.router.navigate(["info"]);
-  }
+ 
   
   //metodo del boton eliminar. llama al metodo de servicios para eliminar un user 
   Delete(user:User){

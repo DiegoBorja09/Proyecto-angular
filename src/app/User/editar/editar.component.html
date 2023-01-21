@@ -6,18 +6,16 @@
         <div class="card-body">
             <form action="">
                 <div class="form-group">
-                    <label for="">Nombre:</label>
-                    <input type="text" class="form-control" [(ngModel)]="user[0].nombre" name="nombre">
-                    <label for="">Apellidos:</label>
-                    <input type="text" class="form-control" [(ngModel)]="user[0].apellidos" name="apellidos">
-                    <label for="">Tipo De Identificacion:</label>
-                    <select type=text required class="form-control " [(ngModel)]="user[0].tipoIdentificacion" name="tipoidentificacion">
-                        <option selected disabled hidden>seleccionar</option>
-                        <option>CC</option>
-                        <option>NIT</option>
-                      </select>
-                    <label for="">Identificacion:</label>
-                    <input type="textr" class="form-control"[(ngModel)]="user[0].identificacion" name="identificacion">
+                    <label for="">marca:</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.marca" name="marca">
+                    <label for="">talla:</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.talla" name="talla">
+                    <label for="">color:</label>
+                    <input type="text" class="form-control"[(ngModel)]="user.color" name="color">
+                    <label for="">genero:</label>
+                    <input type="textr" class="form-control"[(ngModel)]="user.genero" name="genero">
+                    <label for="">descripcion:</label>
+                    <input type="textr" class="form-control"[(ngModel)]="user.descripcion" name="descripcion">
                     
                 </div>
                 <button (click)="Actualizar()" class="btn btn-danger">Actualizar</button>

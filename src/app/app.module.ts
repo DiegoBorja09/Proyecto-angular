@@ -9,10 +9,9 @@ import { EditarComponent } from './User/editar/editar.component';
 import{ FormsModule }from '@angular/forms';
 import{ ServiceService }from '../app/Service/service.service';
 import{HttpClientModule}from '@angular/common/http';
-import { AddTelComponent } from './User/add-tel/add-tel.component';
-import { AddemailsComponent } from './User/addemails/addemails.component';
-import { InfoComponent } from './User/info/info.component';
-import { BuscarComponent } from './User/buscar/buscar.component';
+
+
+
 
 
 @NgModule({
@@ -21,10 +20,6 @@ import { BuscarComponent } from './User/buscar/buscar.component';
     ListarComponent,
     AddComponent,
     EditarComponent,
-    AddTelComponent,
-    AddemailsComponent,
-    InfoComponent,
-    BuscarComponent,
   ],
   imports: [
     BrowserModule,
