@@ -31,7 +31,7 @@ export class ListarComponent implements OnInit {
   Delete(user:User){
     this.service.deleteUser(user).subscribe(data=>{
       this.user=this.user.filter(p=>p!==user);
-      alert("Usuario eliminado!!!!");
+      alert("Zapatos eliminado!!!!");
     });
 
   }

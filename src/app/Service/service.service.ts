@@ -18,9 +18,7 @@ export class ServiceService {
   getUser(){
     return this.http.get<User[]>(this.url);
   }
-  getUserall(){
-    return this.http.get<User>(this.url+"/all");
-  }
+ 
 // crear user y enviarlo a nuestro backend con el metodo post
   createUser(user:User){
     return this.http.post<User>(this.url+"/create",user);
@@ -29,9 +27,7 @@ export class ServiceService {
   createTel(user:User){
     return this.http.post<User>(this.url+"/telefonos/"+user._id,user);
   }
-  createemail(user:User){
-    return this.http.post<User>(this.url+"/emails/"+user._id,user);
-  }
+ 
   //obtener user mediante el id trayendolo desde nuestro backedn
   getByid(id:string){
     return this.http.get<User>(this.url+"/"+id);
@@ -50,9 +46,7 @@ export class ServiceService {
   deleteUser(user:User){
     return this.http.delete<User>(this.url+"/delete/"+user._id);
   }
-  deletetel(user:User[]){
-    return this.http.delete<User>(this.url+"/telefonos/"+user[0]._id);
-  }
+ 
   
   
 }
